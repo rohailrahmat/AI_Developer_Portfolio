@@ -1,6 +1,6 @@
 # AI Developer Portfolio
 
-[![Live Demo](https://ai-developer-portfolio-seven.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://ai-developer-portfolio-seven.vercel.app/)
 [![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/rohailrahmat/AI_Developer_Portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
