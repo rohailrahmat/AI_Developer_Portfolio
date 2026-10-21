@@ -1,0 +1,87 @@
+[
+  {
+    "id": "identity",
+    "title": "Who is Rohail Rahmat",
+    "content": "Rohail Rahmat is an AI engineer based in Gilgit-Baltistan, Pakistan. He works remotely with clients in the US, Saudi Arabia, and Canada. He builds AI chatbots, AI integrations, workflow automations, RAG assistants, and micro SaaS MVPs for startups and small businesses. His GitHub is https://github.com/rohailrahmat and his LinkedIn is https://www.linkedin.com/in/rohail-rahmat."
+  },
+  {
+    "id": "services",
+    "title": "Services",
+    "content": "Rohail offers: 1) AI chatbot development — custom chatbots built on OpenAI, Claude, or Gemini that answer questions, qualify leads, or automate support; 2) AI integration — adding AI features to existing apps through APIs without rebuilding; 3) workflow automation using n8n and Python; 4) AI tools and micro SaaS MVPs; 5) full-stack websites and web apps with Next.js and React; 6) custom AI assistants (RAG) that answer from a client's own documents and data."
+  },
+  {
+    "id": "process",
+    "title": "How Rohail works with clients",
+    "content": "Rohail follows four steps: 1. Diagnose the pain point and understand the business problem deeply. 2. Break it into clear modular steps. 3. Build end to end — backend, AI integration, and interface. 4. Deploy to production and hand over with documentation. He works on a project basis and responds within 24 hours."
+  },
+  {
+    "id": "project-proposalcraft",
+    "title": "ProposalCraft AI",
+    "content": "ProposalCraft AI is a tool where you paste a job post and your skills, choose a tone, and get a tailored Upwork proposal in about 10 seconds. Stack: Gemini API, Python. Live at https://proposal-craft-ai-8tkw.vercel.app/"
+  },
+  {
+    "id": "project-rahnuma",
+    "title": "Rahnuma GB",
+    "content": "Rahnuma GB is an AI trip planner and RAG travel chatbot for Gilgit-Baltistan, Pakistan. Users enter days, budget, destination, and interests, and the chatbot covers places, food, and hidden valleys based on Rohail's original research. Stack: Next.js, Node.js, Gemini API, RAG. Live at https://rahnuma-gb.vercel.app/"
+  },
+  {
+    "id": "project-assignmentforge",
+    "title": "AssignmentForge",
+    "content": "AssignmentForge turns assignment content into professionally formatted, submission-ready Word documents. Built for an education client in Saudi Arabia. Stack: Python, Flask. Live at https://assignment-forge-gamma.vercel.app/"
+  },
+  {
+    "id": "project-verdant",
+    "title": "Verdant",
+    "content": "Verdant is a compliance CRM and document generator with a lead dashboard, sales pipeline, and AI SOP generator. Stack: Python, FastAPI, SQLite. Live at https://crm-compliance.vercel.app/"
+  },
+  {
+    "id": "github",
+    "title": "Rohail's GitHub",
+    "content": "Rohail's GitHub profile is https://github.com/rohailrahmat — you can find his open-source projects and code repositories there."
+  },
+  {
+    "id": "experience",
+    "title": "Work experience",
+    "content": "Rohail has been working as an Independent AI Engineer (freelance) since June 2026, building custom chatbots, RAG assistants, AI integrations, and automations for startups. Before that, he was an AI Engineer at Marketix International (December 2025 to May 2026), building AI chatbots for clients in the US, Saudi Arabia, and Canada, and delivering n8n automations. He was also a Front-End Developer at AIDCO (Pvt) Ltd (January 2025 to July 2025)."
+  },
+  {
+    "id": "education",
+    "title": "Education",
+    "content": "Rohail is studying BS Software Engineering at Karakoram International University (2023 to 2027, expected). He completed a Diploma in Data Science and AI at GBIT × NUST (2024) and a Front-End Development Diploma at TechZoid."
+  },
+  {
+    "id": "certifications",
+    "title": "Certifications",
+    "content": "Google AI Essentials; Meta Front-End Developer Professional Certificate; Linux course from the Google Cybersecurity Certificate."
+  },
+  {
+    "id": "skills",
+    "title": "Technical skills",
+    "content": "Python, Flask, FastAPI, Node.js, Next.js, React, OpenAI API, Gemini API, Claude API, RAG, n8n, Tailwind CSS, Git, Vercel."
+  },
+  {
+    "id": "languages",
+    "title": "Languages",
+    "content": "English (full professional), Urdu (native), Burushaski (native)."
+  },
+  {
+    "id": "contact",
+    "title": "Contact information",
+    "content": "Email: rohailrahmat7525@gmail.com. LinkedIn: https://www.linkedin.com/in/rohail-rahmat. GitHub: https://github.com/rohailrahmat. Contact form on the website at /contact. No phone number is available. Rohail replies within 24 hours."
+  },
+  {
+    "id": "availability",
+    "title": "Availability and location",
+    "content": "Rohail is available for remote work. He is based in Gilgit-Baltistan, Pakistan and has worked with clients in the US, Saudi Arabia, and Canada. He is currently accepting new projects."
+  },
+  {
+    "id": "pricing",
+    "title": "Pricing and budget",
+    "content": "Rohail works on a project basis. Pricing depends on scope, complexity, and timeline. Contact him directly at rohailrahmat7525@gmail.com or via the contact form to discuss your project and get a custom quote."
+  },
+  {
+    "id": "hire",
+    "title": "How to hire Rohail",
+    "content": "To hire Rohail: 1) Fill out the contact form at /contact. 2) Email him directly at rohailrahmat7525@gmail.com. 3) Message him on LinkedIn at https://www.linkedin.com/in/rohail-rahmat. He responds within 24 hours and will schedule a call to understand your project."
+  }
+]

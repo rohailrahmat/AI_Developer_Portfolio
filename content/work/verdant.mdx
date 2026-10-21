@@ -1,0 +1,91 @@
+---
+title: "Verdant"
+slug: "verdant"
+date: "2025"
+tagline: "Compliance CRM and document generator with an AI SOP engine."
+stack: ["Python", "FastAPI", "SQLite"]
+liveUrl: "https://crm-compliance.vercel.app/"
+---
+
+## Problem
+
+Compliance-heavy industries require teams to maintain up-to-date standard operating
+procedures (SOPs), track leads through a sales pipeline, and generate accurate
+compliance documents quickly. Doing this manually is slow and prone to version
+drift — an outdated SOP can create real risk.
+
+## Who it is for
+
+Small businesses and agencies operating in compliance-heavy sectors that need
+a lightweight, self-hosted CRM to manage leads, track pipeline stages, and
+generate compliant documents on demand.
+
+## What I built
+
+A web application combining a CRM with an AI-powered document engine. It includes:
+a lead dashboard showing pipeline stage and status at a glance; a sales pipeline
+view with drag-and-drop stage management; an AI SOP generator that produces
+formatted standard operating procedures from user inputs; and a PDF document
+engine for compliance documents.
+
+## How it works
+
+```
+  ┌──────────────────────────────────────────────┐
+  │  Browser (React frontend)                    │
+  │  Lead dashboard · Pipeline · Doc generator   │
+  └──────────────────┬───────────────────────────┘
+                     │ REST API calls
+                     ▼
+  ┌──────────────────────────────────────────────┐
+  │  FastAPI backend                             │
+  ├───────────────┬──────────────────────────────┤
+  │  CRM layer    │  Document generation layer   │
+  │  (CRUD leads, │  (AI SOP generation,         │
+  │   pipeline    │   PDF rendering)             │
+  │   stages)     │                              │
+  └───────┬───────┴───────────┬──────────────────┘
+          │                   │
+          ▼                   ▼
+     SQLite DB           Gemini API
+     (leads, stages)     (SOP text generation)
+                              │
+                              ▼
+                         PDF engine
+                         (formatted output)
+```
+
+## Stack
+
+- **Python** — backend
+- **FastAPI** — REST API
+- **SQLite** — lightweight persistent storage
+- **Gemini API** — SOP text generation
+- **Vercel** — deployment
+
+## Key decisions
+
+**Why SQLite?** For a small-team CRM with a single operator, SQLite is reliable,
+requires no separate database server, and keeps deployment simple and cheap.
+
+**Why FastAPI?** Automatic OpenAPI docs make it easy to test endpoints during
+development. Async support handles document generation without blocking.
+
+**Why an AI SOP generator?** Writing SOPs from scratch is time-consuming and
+people often don't know where to start. The AI layer generates a complete,
+structured draft from a short description, which the user then reviews and edits.
+
+## Result
+
+Live since 2025 as an independent project. Demonstrates end-to-end delivery of
+a compliance tool: CRM, AI generation, and PDF export in one application.
+
+## Live link
+
+[crm-compliance.vercel.app](https://crm-compliance.vercel.app/)
+
+## What I would improve next
+
+- Add role-based access so multiple team members can use the same instance
+- Migrate from SQLite to PostgreSQL for multi-user deployments
+- Add a document version history so changes to SOPs are tracked

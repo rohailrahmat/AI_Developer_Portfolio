@@ -1,0 +1,89 @@
+---
+title: "AssignmentForge"
+slug: "assignmentforge"
+date: "2025"
+tagline: "Assignment content to submission-ready Word documents."
+stack: ["Python", "Flask", "python-docx"]
+liveUrl: "https://assignment-forge-gamma.vercel.app/"
+---
+
+## Problem
+
+Students and educators often have assignment content ready — answers, research,
+notes — but turning that content into a properly formatted, submission-ready
+Word document takes time, especially when the formatting requirements are strict
+(headings, margins, fonts, cover pages, section numbering).
+
+## Who it is for
+
+An education client in Saudi Arabia needed a tool to help students convert
+assignment content into documents that met their institution's formatting
+requirements, without each student needing to know Word's formatting rules in detail.
+
+## What I built
+
+A web tool where a user pastes or types their assignment content and the tool
+generates a properly formatted, downloadable Word document (.docx) that is
+ready to submit. The formatting follows the client's institution's standards.
+
+## How it works
+
+```
+User input (assignment content, title, student details)
+          │
+          ▼
+  ┌───────────────────────┐
+  │  Web frontend         │
+  │  (input form)         │
+  └──────────┬────────────┘
+             │ POST request
+             ▼
+  ┌───────────────────────┐
+  │  Python / Flask API   │
+  │  (document builder)   │
+  └──────────┬────────────┘
+             │ python-docx
+             ▼
+  ┌───────────────────────┐
+  │  Document generation  │
+  │  (styles, headings,   │
+  │   cover page, body)   │
+  └──────────┬────────────┘
+             │ .docx file
+             ▼
+     Download to user
+```
+
+No AI model is involved — the formatting logic is deterministic and applied
+consistently to every document, which is exactly what the client needed.
+
+## Stack
+
+- **Python** — backend logic
+- **Flask** — API server
+- **python-docx** — Word document generation
+- **Vercel** — deployment
+
+## Key decisions
+
+**Why deterministic formatting instead of AI?** The client's requirement was
+consistent, standards-compliant output — not creative generation. A deterministic
+document builder produces the same formatting every time, which is what matters
+for academic submissions.
+
+**Why Word (.docx) and not PDF?** Students needed to be able to edit the document
+after download if required by their instructor.
+
+## Result
+
+Delivered and deployed for the client. The client was very happy with it.
+
+## Live link
+
+[assignment-forge-gamma.vercel.app](https://assignment-forge-gamma.vercel.app/)
+
+## What I would improve next
+
+- Add support for multiple formatting templates (APA, MLA, custom)
+- Add a live preview before download
+- Allow the client to configure the formatting standards through an admin panel

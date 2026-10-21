@@ -1,0 +1,78 @@
+---
+title: "ProposalCraft AI"
+slug: "proposalcraft-ai"
+date: "2025"
+tagline: "Tailored Upwork proposals in about 10 seconds."
+stack: ["Gemini API", "Python"]
+liveUrl: "https://proposal-craft-ai-8tkw.vercel.app/"
+---
+
+## Problem
+
+Writing a strong Upwork proposal for every job post takes time and mental effort.
+Most proposals end up generic because writers try to reuse the same template.
+
+## Who it is for
+
+Freelancers on Upwork who want a tailored, on-tone proposal without spending
+15–20 minutes on each one.
+
+## What I built
+
+A web tool where you paste a job description and your relevant skills, pick a tone
+(professional, conversational, or direct), and receive a complete, tailored proposal
+in about 10 seconds. The proposal references the specific job details rather than
+filling in a blank template.
+
+## How it works
+
+```
+User input (job post + skills + tone)
+          │
+          ▼
+  ┌───────────────────┐
+  │  Python backend   │   Zod-validated request
+  │  (prompt builder) │
+  └────────┬──────────┘
+           │  Structured prompt
+           ▼
+  ┌─────────────────────┐
+  │   Gemini API        │   gemini-1.5-flash
+  │   (generation)      │
+  └────────┬────────────┘
+           │  Generated proposal text
+           ▼
+     Displayed to user
+```
+
+The prompt instructs the model to write in first person, reference concrete details
+from the job post, and match the chosen tone. Output is streamed to the interface.
+
+## Stack
+
+- **Gemini API** (gemini-1.5-flash) — fast, cost-effective generation
+- **Python** — backend prompt assembly and API calls
+- **Vercel** — deployment
+
+## Key decisions
+
+**Why Gemini Flash?** It produces high-quality text at low latency and low cost for
+a single-turn task like proposal generation — no need for a heavier model.
+
+**Why tone selection?** Different job posts call for different voices. A direct tone
+works well for technical specs; conversational works better for creative briefs.
+
+## Result
+
+Live since 2025. Used by freelancers to generate tailored proposals.
+The tool reduces proposal writing time from 15–20 minutes to under one minute.
+
+## Live link
+
+[proposal-craft-ai-8tkw.vercel.app](https://proposal-craft-ai-8tkw.vercel.app/)
+
+## What I would improve next
+
+- Add a cover letter length option (short / full)
+- Save generation history so users can compare tones side by side
+- Add support for pasting a portfolio link so the model can reference past work

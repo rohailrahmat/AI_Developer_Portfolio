@@ -1,0 +1,97 @@
+---
+title: "Rahnuma GB"
+slug: "rahnuma-gb"
+date: "2025"
+tagline: "AI trip planner and RAG travel chatbot for Gilgit-Baltistan."
+stack: ["Next.js", "Node.js", "Gemini API", "RAG"]
+liveUrl: "https://rahnuma-gb.vercel.app/"
+---
+
+## Problem
+
+Gilgit-Baltistan is one of the most spectacular regions in the world, but travel
+information is scattered, unreliable, or written for mass tourism rather than
+independent travellers. Visitors have no single source they can ask specific
+questions: which valleys are reachable in four days, what is the budget for two
+people, which food is local rather than tourist-facing.
+
+## Who it is for
+
+Independent travellers and small groups planning a trip to Gilgit-Baltistan who
+want specific, honest answers rather than generic travel-blog content.
+
+## What I built
+
+An AI trip planner and RAG chatbot. Users enter how many days they have, their
+budget, their destination within GB, and their interests (nature, culture, food,
+adventure). The chatbot generates a day-by-day itinerary and answers follow-up
+questions from a knowledge base built on Rohail's original research about the
+region — places, food, and hidden valleys that do not appear in standard guides.
+
+## How it works
+
+```
+User input (days, budget, destination, interests)
+          │
+          ▼
+  ┌───────────────────────┐
+  │  Next.js frontend     │
+  │  (chat interface)     │
+  └──────────┬────────────┘
+             │ API request
+             ▼
+  ┌───────────────────────┐
+  │  Node.js API routes   │
+  │  (retrieval layer)    │
+  └──────────┬────────────┘
+             │ Query
+             ▼
+  ┌───────────────────────┐       ┌─────────────────────────┐
+  │  Vector search        │──────▶│  Knowledge base (GB      │
+  │  (semantic retrieval) │       │  travel, Rohail's        │
+  └──────────┬────────────┘       │  original research)      │
+             │ Retrieved chunks   └─────────────────────────┘
+             ▼
+  ┌───────────────────────┐
+  │  Gemini API           │
+  │  (generation with     │
+  │   grounded context)   │
+  └──────────┬────────────┘
+             │ Streamed response
+             ▼
+       Chat interface
+```
+
+Sign-in is required to prevent abuse and control costs.
+
+## Stack
+
+- **Next.js** — frontend and API routes
+- **Node.js** — server logic
+- **Gemini API** — generation
+- **RAG** — retrieval-augmented generation from original research
+- **Vercel** — deployment
+
+## Key decisions
+
+**Why RAG instead of a fine-tuned model?** The knowledge base needs to be updated
+as new information about GB travel becomes available. RAG lets me add or edit
+documents without retraining. It also keeps the chatbot honest: it only answers
+from the indexed content rather than hallucinating from general training data.
+
+**Why require sign-in?** A RAG chatbot with a live LLM backend has real API costs
+per message. Sign-in lets me identify heavy users and rate-limit fairly.
+
+## Result
+
+Live since 2025. Used by travellers planning trips to Gilgit-Baltistan.
+
+## Live link
+
+[rahnuma-gb.vercel.app](https://rahnuma-gb.vercel.app/)
+
+## What I would improve next
+
+- Expand the knowledge base to cover more valleys and seasonal closures
+- Add a map view so users can see itinerary points on a map
+- Add a budget breakdown calculator tied to the trip plan
